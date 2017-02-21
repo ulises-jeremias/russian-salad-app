@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GitHubSearch</title>
+  <meta charset="utf-8">
+  <base href="./../" target="_blank"></base>
+  <!-- Roboto font embed -->
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/fontawesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/app/css/styles.css">
+  <link rel="stylesheet" href="assets/app/css/query.css">
+  <link rel="stylesheet" href="assets/app/css/menu.css">
+  <link rel="stylesheet" href="assets/app/css/forms.css">
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+  <body>
+    <div class="umd_jumb">
+      <div class="umd_container">
+          <h1>GitHubSearch</h1>
+          <hr>
+      </div>
+    </div>
+    <div class="umd_container">
+      <div class="searchContainer">
+        <h1>Search Github Users</h1>
+        <p class="lead">Enter a username to fetch a users profile information and repositories</p>
+        <input type="text" id="searchUser" class="form-control" placeholder="Github Username...">
+      </div>
+      <br>
+      <div id="profile"></div>
+    </div><!-- /.container -->
+    <div class="umd_jumb" style="background-color: rgba(0,0,0,0);"><div class="umd_container"></div></div>
+    <script>
+      window.$ = window.jQuery = require('jquery')
+      require('bootstrap')
+      require("./../assets/app/js/main.js")
+      require("./../assets/app/js/githubsearch.js")
+    </script>
+  </body>
+</html>

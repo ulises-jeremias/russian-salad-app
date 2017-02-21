@@ -1,0 +1,27 @@
+{
+  "name": "russian-salad-app",
+  "version": "0.1.0",
+  "description": ":v",
+  "main": "app.js",
+  "author": "ulises-jeremias",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/ulises-jeremias/russian-salad-app"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "bootstrap": "^3.3.7",
+    "electron": "^1.5.0",
+    "electron-installer-dmg": "^0.2.0",
+    "electron-packager": "^8.5.1",
+    "file-system": "^2.2.2",
+    "jquery": "^3.1.1"
+  },
+  "scripts": {
+    "start": "electron app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "package-mac": "electron-packager . RussianSaladApp --overwrite --platform=darwin --arch=x64 --icon=assets/icons/mac/icon.icns --prune=true --out=release-builds",
+    "package-win": "electron-packager . RussianSaladApp --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/icons/win/icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Electron Tutorial App\"",
+    "package-linux": "electron-packager . RussianSaladApp --overwrite --platform=linux --arch=x64 --prune=true --out=release-builds"
+  }
+}

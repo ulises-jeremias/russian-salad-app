@@ -28,10 +28,10 @@ exports.localTest = () => {
     console.log(localStorage.getItem('test'));
 }
 
-// UMDForm functions
+// cmdForm functions
 
 exports.getFormData = () => {
-  let nodeList = document.umd_form.elements,
+  let nodeList = document.cmd_form.elements,
       data = new Object();
   for (var i = 0; i < (nodeList.length - 1); i++) {
     data[nodeList[i].name] = nodeList[i].value;
@@ -44,22 +44,22 @@ exports.render_form = (elem, inputs, action=null) => {
 
   form = document.createElement('form');
     form.setAttribute("role", "form");
-    form.setAttribute("name", "umd_form");
-    form.setAttribute("id", "umd_form");
-    form.setAttribute("class", "umd_form");
+    form.setAttribute("name", "cmd_form");
+    form.setAttribute("id", "cmd_form");
+    form.setAttribute("class", "cmd_form");
     form.setAttribute("action", "javascript: " + action)
 
   for (var i = 0; i < inputs.length; i++) {
     // preparing children to append
     div = document.createElement('div');
-      div.setAttribute("class", "umd_input-group");
+      div.setAttribute("class", "cmd_input-group");
     input = document.createElement('input');
       input.setAttribute("type", "text");
       input.setAttribute("name", inputs[i]);
     label = document.createElement('label');
       label.innerHTML = inputs[i];
       label.setAttribute("for", inputs[i]);
-      label.setAttribute("class", "umd_label");
+      label.setAttribute("class", "cmd_label");
 
     // append generated children
     div.appendChild(input);
@@ -69,9 +69,9 @@ exports.render_form = (elem, inputs, action=null) => {
 
   // preparing children to append
   script = document.createElement('script');
-    script.setAttribute("src", "assets/app/js/umd_form.js");
+    script.setAttribute("src", "assets/app/js/cmd_form.js");
   container = document.createElement('div');
-    container.setAttribute("class", "umd_form_container");
+    container.setAttribute("class", "cmd_form_container");
   wrap = document.createElement('div');
     wrap.className = "wrap";
     wrap.style.width = "100%";

@@ -13,11 +13,17 @@ document.addEventListener('DOMContentLoaded', () => {
           }
           let data = JSON.parse(content);
           for (var i = 0; i < data.ideas.length; i++) {
-            Func.$('#ideas').innerHTML += (`
-              <div class="well">
-                <div class="row">
-                  <div class="col-md-7">
-                    ${data.ideas[i].title} -> ${data.ideas[i].description}</h2>
+            Func.$('#accordion').innerHTML += (`
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse${i + 1}">
+                    ${data.ideas[i].title}</a>
+                  </h4>
+                </div>
+                <div id="collapse${i + 1}" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    ${data.ideas[i].description}
                   </div>
                 </div>
               </div>
@@ -38,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     p.innerHTML = '&copy; ' + Func.$('title')[0].innerHTML;
     footer.appendChild(p);
-    span.className = 'fa fa-arrow-up umd_gotop';
+    span.className = 'fa fa-arrow-up cmd_gotop';
     body.appendChild(footer);
     body.appendChild(span);
   }();

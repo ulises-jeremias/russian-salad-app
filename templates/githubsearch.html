@@ -5,14 +5,15 @@
   <meta charset="utf-8">
   <base href="./../" target="_blank"></base>
   <!-- Roboto font embed -->
-  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+  <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Roboto'>
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/fontawesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/bootstrap-material-design/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/bootstrap-material-design/css/bootstrap-material-design.min.css">
   <link rel="stylesheet" href="assets/app/css/styles.css">
   <link rel="stylesheet" href="assets/app/css/query.css">
-  <link rel="stylesheet" href="assets/app/css/menu.css">
-  <link rel="stylesheet" href="assets/app/css/forms.css">
+  <link rel="stylesheet" href="assets/app/css/cmd_form.css">
+  <link rel="stylesheet" href="assets/app/css/modal_form.css">
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -21,13 +22,13 @@
   <![endif]-->
 </head>
   <body>
-    <div class="umd_jumb">
-      <div class="umd_container">
+    <div class="cmd_jumbotron">
+      <div class="cmd_container">
           <h1>GitHubSearch</h1>
           <hr>
       </div>
     </div>
-    <div class="umd_container">
+    <div class="cmd_container">
       <div class="searchContainer">
         <h1>Search Github Users</h1>
         <p class="lead">Enter a username to fetch a users profile information and repositories</p>
@@ -36,7 +37,7 @@
       <br>
       <div id="profile"></div>
     </div><!-- /.container -->
-    <div class="umd_jumb" style="background-color: rgba(0,0,0,0);"><div class="umd_container"></div></div>
+    <div class="cmd_jumbotron" style="background-color: rgba(0,0,0,0);"><div class="cmd_container"></div></div>
     <script>
       window.$ = window.jQuery = require('jquery')
       require('bootstrap')
